@@ -20,10 +20,12 @@ Includes:
 * SDL_ttf 2.0.14
 * SMPEG 2.0.0
 
-What is not implemented here:
--------------------------------
+OpenGL:
+-------
 
-* OpenGL headers (use [opengl](https://github.com/nim-lang/opengl) lib instead)
+There are no OpenGL headers here, currently there are two options you can use.
+* The official [OpenGL](https://github.com/nim-lang/opengl) binding. The advantage here is that it only loads what you actually use. But the disadvantage is, that it crashes the program if it can't find a function that you use in your code. No error handling possible.
+* [glad](https://github.com/Dav1dde/glad) is a binding generator that also happens to support Nim. The advantage is that you can specify exactly what subset of OpenGL you want generated. And you can check at runtime if certain extensions could be loaded.
 
 Versioning scheme:
 ------------------
